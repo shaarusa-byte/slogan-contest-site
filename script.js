@@ -1,5 +1,5 @@
 // === CONFIGURE THESE ===
-const GOOGLE_FORM_URL = 'https://forms.gle/your-form-id'; // replace with your link
+const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/1ALg9pZ0jKW9SdSDoag8bIRbMk97j8rh705rSERYWVwI/edit'; // replace with your link
 const WHATSAPP_NUMBER = '+91XXXXXXXXXX'; // replace with your number
 const CONTACT_EMAIL = 'contact@example.com'; // replace
 const ENTRY_DEADLINE_IST = '2025-12-31T23:59:59+05:30'; // IST
@@ -9,7 +9,7 @@ const WINNER_ANNOUNCE_DATE = '2026-01-26';
 // Set link targets
 ['enterNowTop','enterNowHero','enterNowHow','enterNowFooter'].forEach(id=>{
   const el = document.getElementById(id);
-  if (el) el.href = GOOGLE_FORM_URL;https://docs.google.com/forms/d/1ALg9pZ0jKW9SdSDoag8bIRbMk97j8rh705rSERYWVwI/edit
+  if (el) el.href = GOOGLE_FORM_URL;
 });
 document.getElementById('whatsappNumber').textContent = WHATSAPP_NUMBER;
 document.getElementById('contactEmail').textContent = CONTACT_EMAIL;
