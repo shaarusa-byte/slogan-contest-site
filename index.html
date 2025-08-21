@@ -15,6 +15,7 @@
     <div class="container nav-inner">
       <div class="brand">Slogan Contest 2025</div>
       <nav class="nav-links">
+        <a href="#pay">Pay</a>
         <a href="#how">How It Works</a>
         <a href="#prizes">Prizes</a>
         <a href="#why">Why Join</a>
@@ -26,15 +27,15 @@
     </div>
   </header>
 
-  <section class="hero">
+  <section class="hero" style="background-image:url('./assets/banner.svg')">
     <div class="container hero-grid">
-      <div>
+      <div class="hero-copy">
         <div class="pill"><span>India’s Biggest Slogan Challenge</span></div>
         <h1>One line could change <span class="accent">everything</span>!</h1>
         <p class="lead">Submit your best slogan in 25 words or less. Big, tangible prizes: Car • Bike • Smartphones • Cash.</p>
         <div class="hero-cta">
-          <a class="btn primary" id="enterNowHero" target="_blank" rel="noreferrer">Enter Now</a>
-          <a href="#prizes" class="link">See prizes →</a>
+          <a class="btn primary" href="#pay">Pay Entry Fee</a>
+          <a class="btn" id="enterNowHero" target="_blank" rel="noreferrer">Enter Now</a>
         </div>
 
         <div class="stats">
@@ -57,11 +58,34 @@
         </div>
         <p class="tiny">Entries close on <b>31 Dec 2025 (IST)</b>. Winners announced on <b>26 Jan 2026</b>.</p>
       </div>
-      <div class="prize-cards">
-        <div class="card"><div class="card-title">Grand Prize</div><div class="card-value">Car</div></div>
-        <div class="card"><div class="card-title">Second Prize</div><div class="card-value">Bike</div></div>
-        <div class="card"><div class="card-title">Third Prize</div><div class="card-value">Smartphones</div></div>
-        <div class="card"><div class="card-title">Bonus</div><div class="card-value">Cash</div></div>
+      <div class="prize-cards with-images">
+        <div class="card"><img src="./assets/car.svg" alt="Grand Prize Car"><div class="card-title">Grand Prize</div><div class="card-value">Car</div></div>
+        <div class="card"><img src="./assets/bike.svg" alt="Second Prize Bike"><div class="card-title">Second Prize</div><div class="card-value">Bike</div></div>
+        <div class="card"><img src="./assets/phone.svg" alt="Third Prize Smartphones"><div class="card-title">Third Prize</div><div class="card-value">Smartphones</div></div>
+        <div class="card"><img src="./assets/cash.svg" alt="Bonus Cash"><div class="card-title">Bonus</div><div class="card-value">Cash</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pay" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Pay Entry Fee</h2>
+      <p class="section-sub">Use Razorpay to pay securely. After payment, you’ll be redirected to the entry form.</p>
+      <div class="pay-grid">
+        <div class="card soft">
+          <div class="card-head">Option A — Payment Link (Recommended)</div>
+          <p>Create a Razorpay <b>Payment Link</b> and paste it below. In Razorpay settings, set <b>Success Redirect URL</b> to your Google Form link to ensure each payer is taken to the form automatically.</p>
+          <div class="inline">
+            <a class="btn primary" id="razorpayLinkBtn" target="_blank" rel="noreferrer">Pay Now</a>
+            <a class="btn" id="enterAfterPay" target="_blank" rel="noreferrer">Enter Form</a>
+          </div>
+          <p class="tiny muted">Tip: You can append <code>?source=razorpay</code> to your Google Form to track paid entries.</p>
+        </div>
+        <div class="card soft">
+          <div class="card-head">Option B — Checkout.js (Advanced)</div>
+          <p>If you have a backend that creates <b>orders</b>, you can use Razorpay Checkout.js. Add your <b>key_id</b> and <b>order_id</b> in <code>script.js</code> and uncomment the code.</p>
+          <p class="tiny muted">Requires server to create/capture orders. For most people, <b>Payment Link</b> is easiest.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -69,7 +93,7 @@
   <section id="why" class="section">
     <div class="container">
       <h2 class="section-title">What sets us apart</h2>
-      <p class="section-sub">100% Skill‑Based • Transparent Judging • Big, tangible prizes</p>
+      <p class="section-sub">100% Skill-Based • Transparent Judging • Big, tangible prizes</p>
       <div class="grid four">
         <div class="card soft"><div class="card-head">Skill-based, not luck</div><p>Judged on originality, clarity, and relevance by experts.</p></div>
         <div class="card soft"><div class="card-head">Big tangible prizes</div><p>Car, Bike, Smartphones and Cash vouchers.</p></div>
@@ -79,17 +103,18 @@
     </div>
   </section>
 
-  <section id="how" class="section alt">
+  <section id="how" class="section">
     <div class="container">
       <h2 class="section-title">Four simple steps</h2>
       <div class="grid four">
-        <div class="card soft"><div class="step">01</div><div class="card-head">Register</div><p>Pay entry fee if applicable and get your Participant ID.</p></div>
+        <div class="card soft"><div class="step">01</div><div class="card-head">Pay entry fee</div><p>Use Razorpay (UPI, cards, wallets, netbanking).</p></div>
         <div class="card soft"><div class="step">02</div><div class="card-head">Submit slogan</div><p>Share your best line in 25 words or less.</p></div>
         <div class="card soft"><div class="step">03</div><div class="card-head">Judges review</div><p>Expert panel evaluates on clear criteria.</p></div>
         <div class="card soft"><div class="step">04</div><div class="card-head">Winners announced</div><p>Results on <b>26 Jan 2026</b>.</p></div>
       </div>
       <div class="inline">
-        <a class="btn primary" id="enterNowHow" target="_blank" rel="noreferrer">Enter Now</a>
+        <a class="btn primary" href="#pay">Pay Now</a>
+        <a class="btn" id="enterNowHow" target="_blank" rel="noreferrer">Enter Now</a>
         <div class="muted tiny">Deadline: 31 Dec 2025 • Judging: Originality (40%), Clarity (30%), Relevance (30%)</div>
       </div>
     </div>
@@ -99,11 +124,11 @@
     <div class="container">
       <h2 class="section-title">Win big. For real.</h2>
       <p class="section-sub">Tangible rewards you can see and celebrate.</p>
-      <div class="grid four">
-        <div class="card soft"><div class="card-head">Grand Prize: Car</div><p>Displayed images are illustrative. Actual models/specs will be shared before distribution.</p></div>
-        <div class="card soft"><div class="card-head">Second Prize: Bike</div><p>Displayed images are illustrative. Actual models/specs will be shared before distribution.</p></div>
-        <div class="card soft"><div class="card-head">Third: Smartphones</div><p>Displayed images are illustrative. Actual models/specs will be shared before distribution.</p></div>
-        <div class="card soft"><div class="card-head">Bonus: Cash Vouchers</div><p>Displayed images are illustrative. Actual models/specs will be shared before distribution.</p></div>
+      <div class="grid four prize-grid">
+        <div class="card soft vcard"><img src="./assets/car.svg" alt="Car"><div class="card-head">Grand Prize: Car</div><p>Illustrative image. Actual model/specs will be announced before distribution.</p></div>
+        <div class="card soft vcard"><img src="./assets/bike.svg" alt="Bike"><div class="card-head">Second Prize: Bike</div><p>Illustrative image. Actual model/specs will be announced before distribution.</p></div>
+        <div class="card soft vcard"><img src="./assets/phone.svg" alt="Phones"><div class="card-head">Third: Smartphones</div><p>Illustrative image. Actual model/specs will be announced before distribution.</p></div>
+        <div class="card soft vcard"><img src="./assets/cash.svg" alt="Cash"><div class="card-head">Bonus: Cash Vouchers</div><p>Illustrative image. Actual model/specs will be announced before distribution.</p></div>
       </div>
     </div>
   </section>
@@ -114,12 +139,12 @@
       <ul class="rules">
         <li>One entry per person.</li>
         <li>Slogan must be original & under 25 words.</li>
-        <li>Copied or AI‑generated without disclosure will be disqualified.</li>
+        <li>Copied or AI-generated without disclosure will be disqualified.</li>
         <li>Judges’ decision is final.</li>
         <li>Prizes are not transferable; ID verification required.</li>
-        <li>Entry fee (if any) is non‑refundable.</li>
+        <li>Entry fee (if any) is non-refundable.</li>
       </ul>
-      <p class="tiny muted">This is a <b>100% skill‑based contest</b>. No lottery. No chance. Transparent criteria.</p>
+      <p class="tiny muted">This is a <b>100% skill-based contest</b>. No lottery. No chance. Transparent criteria.</p>
     </div>
   </section>
 
@@ -127,9 +152,9 @@
     <div class="container">
       <h2 class="section-title">You asked. We answered.</h2>
       <div class="faq">
-        <details open><summary>Is this a lottery?</summary><p>No. This is a skill‑based contest judged by experts using clear criteria.</p></details>
+        <details open><summary>Is this a lottery?</summary><p>No. This is a skill-based contest judged by experts using clear criteria.</p></details>
         <details><summary>How are winners chosen?</summary><p>Judges score every shortlisted slogan on Originality (40%), Clarity (30%), and Relevance (30%).</p></details>
-        <details><summary>How do I pay the entry fee?</summary><p>Use the secure payment link on the site. After payment, you will be directed to the entry form.</p></details>
+        <details><summary>How do I pay the entry fee?</summary><p>Click <b>Pay Now</b> and complete payment via Razorpay. You will be redirected to the entry form automatically.</p></details>
         <details><summary>Can I submit multiple entries?</summary><p>No. Only one entry per person is allowed to keep it fair.</p></details>
       </div>
     </div>
@@ -150,11 +175,12 @@
     <div class="container footer-grid">
       <div>
         <div class="brand">Slogan Contest 2025</div>
-        <p class="muted tiny">100% Skill‑Based Contest. Transparent Judging. No Lottery. No Chance.</p>
+        <p class="muted tiny">100% Skill-Based Contest. Transparent Judging. No Lottery. No Chance.</p>
       </div>
       <div>
         <div class="footer-head">Quick Links</div>
         <ul class="links tiny">
+          <li><a href="#pay">Pay Entry Fee</a></li>
           <li><a href="#how">How It Works</a></li>
           <li><a href="#prizes">Prizes</a></li>
           <li><a href="#rules">Rules & Terms</a></li>

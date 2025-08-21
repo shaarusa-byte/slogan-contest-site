@@ -1,19 +1,17 @@
-# Slogan Contest 2025 — Static Site
+# Slogan Contest 2025 — Static Site (with Razorpay)
 
-This is a single‑page static website ready to deploy on Vercel.
+This static site includes a **Pay Entry Fee** section using **Razorpay Payment Link** (no backend required).
+You can also switch to **Checkout.js** if you have a server to create orders.
 
 ## Configure
+Edit `script.js`:
+- `RAZORPAY_PAYMENT_LINK` → paste your Razorpay Payment Link (Dashboard → Payment Links → Create)
+- `GOOGLE_FORM_URL` → your Google Form
+- `WHATSAPP_NUMBER`, `CONTACT_EMAIL`
+- Dates if needed
 
-Open `script.js` and change:
-- `GOOGLE_FORM_URL`
-- `WHATSAPP_NUMBER`
-- `CONTACT_EMAIL`
-- (dates if needed)
-
-## Local Preview
-Just open `index.html` in your browser.
+### Recommended Razorpay setting
+In your Payment Link settings, set **Success Redirect URL** to your Google Form (you can append `?source=razorpay`).
 
 ## Deploy to Vercel
-1. Create a new GitHub repo and add these files, or zip & upload with the Vercel CLI.
-2. In Vercel, **Add New → Project → Import from Git** and select your repo.
-3. Vercel will detect a **Static Site** and deploy instantly.
+- Import this folder into a GitHub repo and **Import to Vercel**, or use the Vercel CLI to deploy.
