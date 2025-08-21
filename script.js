@@ -9,7 +9,7 @@ const WINNER_ANNOUNCE_DATE = '2026-01-26';
 // Set link targets
 ['enterNowTop','enterNowHero','enterNowHow','enterNowFooter'].forEach(id=>{
   const el = document.getElementById(id);
-  if (el) el.href = GOOGLE_FORM_URL;
+  if (el) el.href = GOOGLE_FORM_URL;https://docs.google.com/forms/d/1ALg9pZ0jKW9SdSDoag8bIRbMk97j8rh705rSERYWVwI/edit
 });
 document.getElementById('whatsappNumber').textContent = WHATSAPP_NUMBER;
 document.getElementById('contactEmail').textContent = CONTACT_EMAIL;
